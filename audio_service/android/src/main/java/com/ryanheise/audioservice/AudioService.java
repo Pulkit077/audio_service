@@ -341,8 +341,10 @@ public class AudioService extends MediaBrowserServiceCompat {
             }
         };
 
-        flutterEngine = AudioServicePlugin.getFlutterEngine(this);
-        System.out.println("flutterEngine warmed up");
+        // App stuck in black screen or native splash when opened after receiving a push notification :
+        // https://github.com/ryanheise/audio_service/issues/875
+        // flutterEngine = AudioServicePlugin.getFlutterEngine(this);
+        // System.out.println("flutterEngine warmed up");
     }
 
     @Override
